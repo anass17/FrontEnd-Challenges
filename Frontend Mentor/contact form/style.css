@@ -1,0 +1,386 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0f1e7;
+    font-family: "Karla", sans-serif;
+}
+
+.contact-form {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form form {
+    background-color: #FFF;
+    max-width: 600px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.contact-form h1 {
+    margin-bottom: 25px;
+}
+
+.contact-form .form-rows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form .form-rows .contact-input {
+    width: 49%;
+}
+
+.contact-form .contact-input {
+    animation: slide-right .5s .3s ease-in-out backwards;
+}
+
+.contact-form .form-rows .contact-input:first-of-type {
+    animation: slide-right .5s .1s ease-in-out backwards;
+}
+
+.contact-form .form-rows .contact-input:last-of-type {
+    animation: slide-left .5s .1s ease-in-out backwards;
+}
+
+.contact-form .contact-input {
+    margin-bottom: 25px;
+}
+
+label {
+    color: #444444;
+}
+
+.contact-form .contact-input label {
+    margin-bottom: 7px;
+    display: block;
+}
+
+.contact-form label span {
+    color: green;
+}
+
+.contact-form .contact-input input,
+.contact-form .contact-input textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #b2b8b6;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .3s;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+}
+
+.contact-form .contact-input input:focus,
+.contact-form .contact-input textarea:focus,
+.contact-form .contact-input input:hover,
+.contact-form .contact-input textarea:hover {
+    border-color:#0c7d69;
+}
+
+.contact-form .label {
+    margin-bottom: 7px;
+    display: block;
+    animation: fade-in .5s .5s ease-in-out backwards;
+}
+
+.contact-form .form-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form .contact-select {
+    width: 49%;
+    margin-bottom: 25px;
+}
+
+.contact-form .contact-select input {
+    appearance: none;
+    margin: 0;
+    width: 1px;
+    height: 1px;
+    display: block;
+    outline: none;
+    opacity: 0;
+}
+
+.contact-form .contact-select label {
+    display: block;
+    width: 100%;
+    position: relative;
+    border: 1px solid #b2b8b6;
+    height: 40px;
+    padding-left: 50px;
+    line-height: 40px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .2s, border-color .2s;
+}
+
+.contact-form .contact-select:first-of-type {
+    animation: slide-right .5s .5s ease-in-out backwards;
+}
+
+.contact-form .contact-select:last-of-type {
+    animation: slide-left .5s .5s ease-in-out backwards;
+}
+
+.contact-form .contact-select label::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #b2b8b6;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transition: border-color .2s;
+}
+
+.contact-form .contact-select input:checked + label,
+.contact-form .contact-select input:focus + label {
+    border-color: #0c7d69;
+    background-color: rgba(12, 125, 105, .1);
+}
+
+.contact-form .contact-select input:checked + label::before {
+    border-color: #0c7d69;
+}
+
+.contact-form .contact-select label::after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #0c7d69;
+    position: absolute;
+    top: 13px;
+    left: 23px;
+    z-index: 2;
+    transform: scale(0);
+    transition: transform .2s;
+}
+
+.contact-form .contact-select input:checked + label::after {
+    transform: scale(1);
+}
+
+.contact-form .contact-input textarea {
+    height: 85px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    resize: none;
+}
+
+.contact-form .contact-input textarea {
+    animation: slide-right .5s .7s ease-in-out backwards;
+}
+
+.contact-form .form-check input {
+    appearance: none;
+    opacity: 0;
+}
+
+.contact-form .form-check label {
+    padding-left: 35px;
+    position: relative;
+    display: block;
+    margin-top: -20px;
+    cursor: pointer;
+    animation: fade-in .5s .9s ease-in-out backwards;
+}
+
+.contact-form .form-check label::before {
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1px solid #b2b8b6;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+}
+
+.contact-form .form-check input:focus + label::before {
+    border-color: #0c7d69;
+}
+
+.contact-form .form-check label::after {
+    content: url('data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%2215%22 height%3D%2215%22 fill%3D%22%23FFF%22 class%3D%22bi bi-check2%22 viewBox%3D%220 0 16 16%22%3E%3Cpath d%3D%22M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0%22/%3E%3C%2Fsvg%3E');
+    background-color: #0c7d69;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border: 1px solid #0c7d69;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.contact-form .form-check input:checked + label::after {
+    opacity: 1;
+}
+
+.contact-form .contact-submit {
+    border: none;
+    background-color: #0c7d69;
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    color: #FFF;
+    letter-spacing: 1.5px;
+    transition: background-color .3s;
+    cursor: pointer;
+    outline: none;
+    margin-top: 25px;
+    animation: slide-up-show .5s 1s ease-in-out backwards;
+}
+
+.contact-form .contact-submit:hover,
+.contact-form .contact-submit:focus {
+    background-color: #063f36;
+}
+
+.contact-form .contact-error {
+    margin-top: 10px;
+    color: #e50000;
+    display: block;
+    display: none;
+}
+
+.contact-success {
+    background-color: #2a4244;
+    color: #FFF;
+    padding: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    animation: slide-down .5s ease-in-out backwards;
+}
+
+.contact-success h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contact-success h2 svg {
+    margin-right: 7px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    padding: 1px;
+    position: relative;
+    top: 2px;
+}
+
+.contact-success p {
+    color: #AAA;
+    white-space: nowrap;
+}
+
+@keyframes slide-down {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    100% {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        top: 20px;
+        opacity: 1;
+    }
+    100% {
+        top: -20px;
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up-show {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-form .form-rows,
+    .contact-form .form-select {
+        flex-direction: column;
+    }
+    .contact-form .form-rows .contact-input,
+    .contact-form .contact-select {
+        width: 100%;
+    }
+
+    .contact-form .contact-select:first-of-type {
+        order: 1;
+    }
+    .contact-form .contact-select:not(:first-of-type) {
+        margin-bottom: 10px;
+    }
+}

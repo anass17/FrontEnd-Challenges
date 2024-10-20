@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="contact-form">
+        <form action="">
+            <h1>Contact Us</h1>
+            <div class="form-rows">
+                <div class="contact-input">
+                    <label for="contact-first-name">First Name <span>*</span></label>
+                    <input type="text" name="" id="contact-first-name">
+                    <span class="contact-error">This field is required</span>
+                </div>
+                <div class="contact-input">
+                    <label for="contact-last-name">Last Name <span>*</span></label>
+                    <input type="text" name="" id="contact-last-name">
+                    <span class="contact-error">This field is required</span>
+                </div>
+            </div>
+            <div class="contact-input">
+                <label for="contact-email">Email Address <span>*</span></label>
+                <input type="email" name="" id="contact-email">
+                <span class="contact-error">Please enter a valid email address</span>
+            </div>
+            <label class="label">Query Type <span>*</span></label>
+            <div class="form-select">
+                <div class="contact-select">
+                    <input type="radio" name="contact-query" id="contact-query-general">
+                    <label for="contact-query-general">General Enquiry</label>
+                    <span class="contact-error">Please Select a query type</span>
+                </div>
+                <div class="contact-select">
+                    <input type="radio" name="contact-query" id="contact-query-support">
+                    <label for="contact-query-support">Support Request</label>
+                </div>
+            </div>
+            <div class="contact-input">
+                <label for="contact-message">Message <span>*</span></label>
+                <textarea name="" id="contact-message"></textarea>
+                <span class="contact-error">This field is required</span>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="" id="contact-consent">
+                <label for="contact-consent">I consent to being contact by the team <span>*</span></label>
+                <span class="contact-error">To submit this form, please consent to being contact</span>
+            </div>
+            <button class="contact-submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
